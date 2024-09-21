@@ -1,0 +1,276 @@
+/* Global Styles */
+
+:root {
+  --primary-color: #ff5722;
+  --secondary-color: #e64a19;
+  --background-light: #f4f4f4;
+  --background-dark: #333;
+  --text-color-light: #fff;
+  --text-color-dark: #222;
+  --card-shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://eskipaper.com/images/sports-wallpaper-14.jpg") no-repeat center
+      center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* About Section */
+
+.about-section {
+  padding: 60px;
+  background-color: var(--background-light);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+}
+
+.about-section p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+/* Teams Section */
+
+.teams-section {
+  padding: 60px;
+  background-color: var(--background-dark);
+  color: var(--text-color-light);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Events Section */
+
+.events-section {
+  padding: 60px;
+  background-color: var(--background-light);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.event-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background: linear-gradient(135deg, #fff, #eee);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  text-align: center;
+}
+
+.event-card:hover {
+  background-color: #ccc;
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Contact Section */
+
+.contact-section {
+  padding: 60px;
+  background-color: var(--background-dark);
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.contact-section button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--background-dark);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #444;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .team-cards,
+  .event-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
